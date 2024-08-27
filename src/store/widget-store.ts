@@ -1,16 +1,18 @@
 import { EditorWidgetType } from '@/editor-widgets/types';
-import {  makeAutoObservable} from 'mobx'
+import { makeAutoObservable} from 'mobx'
 
-class WidgetStore {
-  widgetsData: Record<string, EditorWidgetType>;
+export class WidgetStore {
+  widgetsData: Record<string, unknown>; // TODO;
+  widgetsSchemas: Record<string, unknown>;
 
   constructor() {
     makeAutoObservable(this);
-    this.widgetsData = {}
+    this.widgetsData = {};
+    this.widgetsSchemas = {};
   }
 
-  addWidget() {
-
+  addWidget(widgetType: EditorWidgetType) {
+    console.log(widgetType);
   }
 
   deleteWidget() {
@@ -21,5 +23,3 @@ class WidgetStore {
     
   }
 }
-
-export const widgetStore = new WidgetStore();

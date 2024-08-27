@@ -3,3 +3,6 @@ export type BaseWidgetModel = {
 }
 
 export type EditorWidgetType = 'text' | 'image' | 'button';
+export type WidgetDataModel = {
+  createSchema: () => unknown;
+}

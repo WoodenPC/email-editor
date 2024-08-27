@@ -18,6 +18,7 @@ export const EditorContext = createContext<EditorContextData>({
   updateWidget: () => {},
 });
 
+//  TODO: remove
 export const EditorContextProvider = ({
   children,
 }: {

@@ -1,11 +1,11 @@
+import { RootStoreProvider } from "@/store/providers/store-provider"
 import { EditorCanvas } from "../editor-canvas/editor-canvas"
-import { EditorContextProvider } from "../editor-context"
 import { EditorLayout } from "../editor-layout/editor-layout"
 import { EditorSidebar } from "../editor-sidebar/editor-sidebar"
 
 export const EditorPlayground = () => {
   return <div>
-    <EditorContextProvider>
+    <RootStoreProvider>
     <EditorLayout>
       <EditorLayout.Sidebar>
         <EditorSidebar />
@@ -14,6 +14,6 @@ export const EditorPlayground = () => {
         <EditorCanvas />
       </EditorLayout.Canvas>
     </EditorLayout>
-    </EditorContextProvider>
+    </RootStoreProvider>
   </div>
 }
