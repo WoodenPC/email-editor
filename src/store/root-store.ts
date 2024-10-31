@@ -1,8 +1,9 @@
-import { WidgetStore } from "./widget-store";
+import { EditorStateStore } from "@/editor/editor-state-store";
 
 export class RootStore {
-  widgetStore: WidgetStore;
+  editorState: EditorStateStore;
+
   constructor() {
-    this.widgetStore = new WidgetStore();
+    this.editorState = new EditorStateStore();
   }
 }
