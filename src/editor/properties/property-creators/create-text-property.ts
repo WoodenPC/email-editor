@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid"
-import { IProperty, PropertyTypeEnum } from "./types"
+import { IProperty, PropertyTypeEnum } from "../types"
 import { makeAutoObservable } from "mobx"
 
 type TextPropertyArgs = {

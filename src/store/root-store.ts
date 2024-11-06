@@ -1,9 +1,9 @@
-import { EditorStateStore } from "@/editor/editor-state-store";
+import { EditorStore } from "@/editor/editor-state-store";
 
 export class RootStore {
-  editorState: EditorStateStore;
+  editorState: EditorStore;
 
   constructor() {
-    this.editorState = new EditorStateStore();
+    this.editorState = new EditorStore();
   }
 }

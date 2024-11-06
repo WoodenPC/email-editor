@@ -3,7 +3,7 @@ import { EmailFrame } from "./email-frame"
 import { useEditorStore } from './hooks/useEditorStore'
 import { Button } from '@/ui/button';
 import { WidgetTypeEnum } from './widgets/types';
-import { WidgetPropertyGrid } from './widget-property-grid';
+import { WidgetPropertyGrid } from './widgets/widget-property-grid';
 
 export const EmailEditor = observer(() => {
   const editorStore = useEditorStore();

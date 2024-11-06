@@ -1,9 +1,7 @@
 import { makeAutoObservable } from "mobx";
 import { IWidgetModel, WidgetTypeEnum } from "./widgets/types";
-import { WidgetModelFactory } from "./widget-factory";
-
-export class EditorStateStore {
-  private _widgetModelFactory: WidgetModelFactory;
+import { widgetCreators } from "./widgets/widget-model-creators";
+export class EditorStore {
   private _selectedWidgetId: string | null;
   
   widgets: Map<string, IWidgetModel>;
@@ -11,7 +9,6 @@ export class EditorStateStore {
   constructor() {
     makeAutoObservable(this);
     this.widgets = new Map();
-    this._widgetModelFactory = new WidgetModelFactory();
     this._selectedWidgetId = null;
   }
 
@@ -33,7 +30,7 @@ export class EditorStateStore {
   createWidget(widgetType: WidgetTypeEnum) {
     switch(widgetType) {
       case WidgetTypeEnum.Text:
-        return this._widgetModelFactory.createTextWidgetModel();
+        return widgetCreators.createTextWidgetModel();
     }
   }
 
@@ -51,5 +48,17 @@ export class EditorStateStore {
 
   get selectedWidgetId() {
     return this._selectedWidgetId;
+  }
+
+  get selectedWidgetModel() {
+    if (!this._selectedWidgetId) {
+      return null;
+    }
+
+    if (!this.widgets.has(this._selectedWidgetId)) {
+      return null
+    }
+
+    return this.widgets.get(this._selectedWidgetId);
   }
 }

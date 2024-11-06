@@ -1,4 +1,4 @@
-import { IWidgetField } from "./widgets/types"
+import { IWidgetField } from "./types"
 
 export type WidgetFieldRendererProps = () => {
   field: IWidgetField;

@@ -1,6 +1,6 @@
 import { observer } from "mobx-react"
 import { useEditorStore } from "./hooks/useEditorStore"
-import { WidgetRenderer } from "./widget-renderer";
+import { WidgetRenderer } from "./widgets/widget-renderer";
 
 export const EmailFrame = observer(() => {
   const editorStore = useEditorStore();
