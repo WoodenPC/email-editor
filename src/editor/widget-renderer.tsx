@@ -1,6 +1,6 @@
 import { observer } from "mobx-react";
 import { useEditorStore } from "./hooks/useEditorStore";
-import { WidgetTypeEnum } from "./types";
+import { WidgetTypeEnum } from "./widgets/types";
 import { TextWidgetComponent } from "./widgets/text-widget/text-widget.ui";
 import { ITextWidgetModel } from "./widgets/text-widget/text-widget.model";
 

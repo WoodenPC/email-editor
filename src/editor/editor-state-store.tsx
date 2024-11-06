@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { IWidgetModel, WidgetTypeEnum } from "./types";
+import { IWidgetModel, WidgetTypeEnum } from "./widgets/types";
 import { WidgetModelFactory } from "./widget-factory";
 
 export class EditorStateStore {

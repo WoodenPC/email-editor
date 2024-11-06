@@ -2,7 +2,7 @@ import { observer } from 'mobx-react'
 import { EmailFrame } from "./email-frame"
 import { useEditorStore } from './hooks/useEditorStore'
 import { Button } from '@/ui/button';
-import { WidgetTypeEnum } from './types';
+import { WidgetTypeEnum } from './widgets/types';
 import { WidgetPropertyGrid } from './widget-property-grid';
 
 export const EmailEditor = observer(() => {

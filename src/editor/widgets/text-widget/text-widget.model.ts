@@ -1,4 +1,4 @@
-import { IWidgetModel, WidgetTypeEnum } from '@/editor/types';
+import { IWidgetModel, WidgetTypeEnum } from '../types';
 import { makeAutoObservable } from 'mobx';
 import { z } from 'zod';
 
