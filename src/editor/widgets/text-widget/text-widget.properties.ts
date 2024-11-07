@@ -5,8 +5,9 @@ import { propertyCreators } from "@/editor/properties/property-creators";
 export const createTextWidgetProperties = (model: TextWidgetModel): IProperty<any>[] => {
   return [
     propertyCreators.createTextProperty({
+      name: 'Текст',
       value: model.value,
-      onChange: (val) => {
+      onUpdateValue: (val) => {
         model.value = val;
       }
     })

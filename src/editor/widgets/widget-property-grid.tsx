@@ -3,6 +3,7 @@ import { observer } from "mobx-react"
 import { useEditorStore } from "../hooks/useEditorStore";
 import { createWidgetProperties } from "./create-widget-properties";
 import { IWidgetModel } from "./types";
+import { PropertyRenderer } from "../properties/property-renderer";
 
 type WidgetPropertyGridBodyProps = {
   widgetModel: IWidgetModel;
@@ -11,8 +12,16 @@ type WidgetPropertyGridBodyProps = {
 const WidgetPropertyGridBody = observer((props: WidgetPropertyGridBodyProps) => {
   const { widgetModel } = props;
   const [properties] = useState(widgetModel ? createWidgetProperties(widgetModel) : [])
-  console.log(properties);
-  return <div></div>
+  return (
+    <div>
+      <h4 className="text-xl font-semibold tracking-tight mb-4">Свойства виджета</h4>
+    <div className="flex flex-col w-full gap-4">
+      {properties.map((property) => (
+        <PropertyRenderer key={property.id} property={property} />
+      ))}
+    </div>
+    </div>
+  )
 })
 
 

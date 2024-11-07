@@ -7,9 +7,13 @@ export enum PropertyTypeEnum {
   anyOf = 'anyOf'
 }
 
+// интерфейс модели проперти (observable)
 export interface IProperty<TValue> {
   id: string;
+  name: string;
   propertyType: PropertyTypeEnum;
   value: TValue;
-  onChange: (updatedValue: TValue) => void;
+  updateValue: (updatedValue: TValue) => void;
 }
+
+export type ITextProperty = IProperty<string>;

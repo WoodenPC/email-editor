@@ -1,4 +1,4 @@
-import { EditorStore } from "@/editor/editor-state-store";
+import { EditorStore } from "@/editor/editor-store";
 
 export class RootStore {
   editorState: EditorStore;

@@ -18,12 +18,8 @@ export interface IWdgetFieldCheckboxMeta {
   anyOf: string[];
 }
 
+// интерфейс модели виджета (observable)
 export interface IWidgetModel {
   id: string;
   widgetType: WidgetTypeEnum;
-}
-
-export interface IWidgetField {
-  id: string;
-  fieldType: WidgetFieldTypeEnum;
 }

@@ -1,21 +1,14 @@
-import { nanoid } from "nanoid"
-import { IProperty, PropertyTypeEnum } from "../types"
-import { makeAutoObservable } from "mobx"
+import { IProperty } from "../types"
+import { TextPropertyModel } from "../text-property";
 
 type TextPropertyArgs = {
+  name: string;
   value: string;
-  onChange: (val: string) => void;
+  onUpdateValue: (val: string) => void;
 }
 
-export const createTextProperty = (args: TextPropertyArgs): IProperty<string> => {
-  const property: IProperty<string> = {
-    id: nanoid(),
-    propertyType: PropertyTypeEnum.Text,
-    value: args.value,
-    onChange: (val: string) => args.onChange(val)
-  }
-
-  makeAutoObservable(property);
-
-  return property;
+export const createTextProperty = ( args: TextPropertyArgs): IProperty<string> => {
+  return new TextPropertyModel(args.name, args.value, (value) => {
+    args.onUpdateValue(value)
+  });
 }

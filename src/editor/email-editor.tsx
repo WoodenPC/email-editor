@@ -17,10 +17,10 @@ export const EmailEditor = observer(() => {
 
 
   return <div className='grid grid-cols-12 w-full h-full'>
-    <div className='col-span-4 bg-slate-300'>
+    <div className='col-span-4 bg-slate-300 p-5'>
       <WidgetPropertyGrid />
     </div>
-    <div className='col-span-8'>
+    <div className='col-span-8 p-5'>
     <div className='flex gap-2'>
       <Button onClick={handleCreateWidget(WidgetTypeEnum.Text)}>add text widget</Button>
     </div>
