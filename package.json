@@ -9,8 +9,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "rm -rf build && npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "rm -rf dist && npm run build",
+    "deploy": "gh-pages -d dist",
     "gen:schema:types": "node ./scripts/generate-schema-types.js ./src/schemas"
   },
   "dependencies": {
