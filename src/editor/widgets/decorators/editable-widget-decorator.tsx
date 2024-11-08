@@ -6,7 +6,7 @@ type EditableWidgetDecoratorProps = {
   onSelect?: () => void;
 };
 
-// TODO: add hover and select logic
+
 export const EditableWidgetDecorator = (
   props: EditableWidgetDecoratorProps
 ) => {

@@ -7,7 +7,7 @@ type WidgetRendererProps = {
   widgetId: string;
 }
 
-const WidgetRendererBody = (props: WidgetRendererProps) => {
+export const WidgetRenderer = (props: WidgetRendererProps) => { 
   const { widgetId } = props;
   const editorStore = useEditorStore();
   const widgetModel = editorStore.getWidgetModelById(widgetId);
@@ -23,8 +23,4 @@ const WidgetRendererBody = (props: WidgetRendererProps) => {
     default:
       return <div>Неизвестный тип виджета</div>;
   } 
-}
-
-export const WidgetRenderer = (props: WidgetRendererProps) => { 
-  return <WidgetRendererBody {...props} />
 }

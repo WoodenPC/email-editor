@@ -23,8 +23,6 @@ export class EditorStore {
   addWidget(widgetType: WidgetTypeEnum) {
     const widget = this.createWidget(widgetType);
     this.widgets.set(widget.id, widget);
-    // TODO: remove
-    this._selectedWidgetId = widget.id;
   }
 
   createWidget(widgetType: WidgetTypeEnum) {
@@ -43,7 +41,7 @@ export class EditorStore {
   }
 
   get widgetIdList() {
-    return [...this.widgets.keys()];    
+    return [...this.widgets.keys()];
   }
 
   get selectedWidgetId() {

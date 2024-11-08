@@ -1,5 +1,6 @@
 
 export enum PropertyTypeEnum {
+  Base = 'base',
   Text = 'text',
   Number = 'number',
   Html = 'html',
@@ -15,5 +16,13 @@ export interface IProperty<TValue> {
   value: TValue;
   updateValue: (updatedValue: TValue) => void;
 }
+
+export interface IPropertyGroup {
+  id: string;
+  title: string;
+  properties: IProperty<any>[];
+}
+
+export type IPropertyItem = IProperty<any> | IPropertyGroup;
 
 export type ITextProperty = IProperty<string>;

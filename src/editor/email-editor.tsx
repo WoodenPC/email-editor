@@ -22,7 +22,7 @@ export const EmailEditor = observer(() => {
     </div>
     <div className='col-span-8 p-5'>
     <div className='flex gap-2'>
-      <Button onClick={handleCreateWidget(WidgetTypeEnum.Text)}>add text widget</Button>
+      <Button onClick={handleCreateWidget(WidgetTypeEnum.Text)}>Добавить виджет текста</Button>
     </div>
     <EmailFrame />
     </div>
